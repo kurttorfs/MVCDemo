@@ -1,0 +1,38 @@
+﻿<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <a href="http://www.dimensiondata.com">
+                        <img class="img img-responsive" alt="DD" src="~/Content/DimensionData_Logo_Transparent.png" />
+                    </a>
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="clear">
+                            <span class="block m-t-xs">
+                                <strong class="font-bold">Example User </strong>
+                            </span> 
+                            <span class="text-muted text-xs block">Example menu <b class="caret"></b></span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    <a href="http://www.dimensiondata.com" data-toggle="tooltip" data-placement="right" title="Go to the Dimension Data website" data-container="body">
+                        <img class="img img-responsive" alt="DD" src="~/Content/DimensionData_Logo_Transparent.png" />
+                    </a>
+                </div>
+            </li>
+            <li class="@Html.IsSelected(action: "Index")" data-toggle="tooltip" data-placement="right" title="Home" data-container="body">
+                <a href="@Url.Action("Index", "Home")"><i class="fa fa-home"></i> <span class="nav-label">Home</span> </a>
+            </li>
+            <li class="@Html.IsSelected(action: "About")" data-toggle="tooltip" data-placement="right" title="About" data-container="body">
+                <a href="@Url.Action("About", "Home")"><i class="fa fa-users"></i> <span class="nav-label">About</span></a>
+            </li>
+            <li class="@Html.IsSelected(action: "Contact")" data-toggle="tooltip" data-placement="right" title="Contact" data-container="body">
+                <a href="@Url.Action("Contact", "Home")"><i class="fa fa-plane"></i> <span class="nav-label">Contact</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
